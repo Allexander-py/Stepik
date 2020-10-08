@@ -1,0 +1,15 @@
+Дано число 1≤n≤10**7, необходимо найти последнюю цифру nn-го числа Фибоначчи.
+def fib_digit(n):
+    F = [0, 1]
+    for el in range(2,n+1):
+        F.append(int(str(F[el-1] + F[el-2])[-1]))
+    return F[n]
+
+
+def main():
+    n = int(input())
+    print(fib_digit(n))
+
+
+if __name__ == "__main__":
+    main()
