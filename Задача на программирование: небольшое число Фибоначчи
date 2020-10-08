@@ -1,0 +1,16 @@
+Дано целое число 1≤n≤40 , необходимо вычислить nn-е число Фибоначчи 
+
+def fib(n):
+    F = [0, 1]
+    for el in range(2,n+1):
+        F.append(F[el-1] + F[el-2])
+    return F[n]
+    
+
+def main():
+    n = int(input())
+    print(fib(n))
+
+
+if __name__ == "__main__":
+    main()
